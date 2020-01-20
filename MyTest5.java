@@ -1,3 +1,4 @@
+
 class MyMap<K, V>{
    private Entry<K,V>[] buckets;
    private int capacity; //16
@@ -132,7 +133,8 @@ public String toString(){
    return "{"+key+", "+value+"}";
 }	
 }
-}	
+}
+	
 public class MyTest5{
 	public static void main(String[] args){
 		MyMap<String, String> myMap = new MyMap<>();
@@ -140,8 +142,6 @@ public class MyTest5{
 		myMap.put("Nepal", "Kathmandu");
 		myMap.put("India", "New Delhi");
 		myMap.put("Australia", "Sydney");
-		//assertNotNull(myMap);
-		for(MyMap.Entry<String, String> map:myMap.entrySet())
-			System.out.println("Key   "+map.getKey()+"    Value   "+map.getValue());
+		System.out.println(myMap.get("Nepal"));
 	}	
 }
